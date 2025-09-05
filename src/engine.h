@@ -1,13 +1,12 @@
 #pragma once
 
-#include <string>
-#include <vector>
 #include "board.h"
-#include "engine.h"
-#include <limits>
+#include <vector>
 #include <map>
+#include <limits>
 
 // Struct to represent a chess move.
+// This is the only place this struct should be defined.
 struct Move {
     int from;
     int to;

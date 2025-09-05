@@ -23,10 +23,12 @@ int main() {
     int board_score = chess_engine.evaluateBoard(chess_board);
     std::cout << "Initial board score: " << board_score << std::endl;
 
-    // In a real program, you would call findBestMove here.
-    // For now, this is just to show that the Engine class is linked.
-    Move bestMove = chess_engine.findBestMove(chess_board, 3);
-    std::cout << "Engine has considered best move." << std::endl;
+    // Generate and print all possible moves for the starting position.
+    std::vector<Move> moves = chess_engine.generateMoves(chess_board);
+    std::cout << "Generated " << moves.size() << " possible moves:" << std::endl;
+    for (const auto& move : moves) {
+        std::cout << "Move from " << move.from << " to " << move.to << std::endl;
+    }
 
     return 0;
 }

@@ -59,7 +59,7 @@ std::string Board::toString() const {
             case Piece::QUEEN_BLACK: s += "q"; break;
             case Piece::KING_BLACK: s += "k"; break;
         }
-        s += "\t";
+        s += "  "; // Use two spaces instead of a tab for better formatting.
     }
     return s;
 }

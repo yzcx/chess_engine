@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,24 +13,24 @@
     <div class="max-w-4xl w-full flex flex-col md:flex-row gap-8">
         <div class="w-full md:w-3/5 flex flex-col items-center">
             <h1 class="text-3xl font-extrabold text-white mb-6 flex items-center">
-                Minimax Search Algorithm: Game Theory Implementation
+                Chess Analyser
             </h1>
             <div id="chessboard" class="chessboard rounded-lg"></div>
             <div class="mt-4 text-sm text-gray-400">
-                <span id="status-message" class="font-semibold text-accent">White to move.</span>
+                <span id="status-message" class="font-semibold text-accent">White to move</span>
             </div>
         </div>
 
         <div class="w-full md:w-2/5 p-6 rounded-xl shadow-2xl flex flex-col space-y-4 panel">
-            <h2 class="text-xl font-bold text-white border-b border-gray-700 pb-2 mb-2">Engine Performance Metrics</h2>
+            <h2 class="text-xl font-bold text-white border-b border-gray-700 pb-2 mb-2">Performance</h2>
 
             <div class="flex justify-between items-center text-gray-400">
-                <p class="font-medium">Current Focus:</p>
+                <p class="font-medium">Turn:</p>
                 <p id="current-player" class="font-bold text-lg text-white px-3 py-1 rounded-full shadow-lg bg-gray-700 border border-gray-600">White</p>
             </div>
 
             <div>
-                <p class="font-medium text-gray-400">Advantage (In Pawns):</p>
+                <p class="font-medium text-gray-400">Advantage in Pawns:</p>
                 <p id="evaluation-score" class="text-4xl font-extrabold mt-1 text-center py-2 rounded-lg data-display score-neutral">0.00</p>
             </div>
             
@@ -43,9 +43,9 @@
 
             <div class="pt-4 border-t border-gray-700 flex flex-col space-y-3">
                 <div class="flex items-center justify-between">
-                    <label for="search-depth" class="font-medium text-gray-400">Search Depth (Intellect):</label>
+                    <label for="search-depth" class="font-medium text-gray-400">Intelligence:</label>
                     <select id="search-depth" class="rounded-md p-1 focus:outline-none focus:ring-1">
-                        <option value="1">1 (Fastest)</option>
+                        <option value="1">1 (Fast)</option>
                         <option value="2" selected>2 (Balanced)</option>
                         <option value="3">3 (Strong)</option>
                         <option value="4">4 (Deep)</option>
@@ -54,15 +54,13 @@
                 
                 <button id="analyse-button" class="font-bold py-3 px-4 rounded-lg flex items-center justify-center btn-primary">
                     <i data-lucide="eye" class="w-5 h-5 mr-2"></i>
-                    Initiate Calculation
+                    Calculate
                 </button>
                 <button id="reset-button" class="font-bold py-2 px-4 rounded-lg btn-secondary">
                     <i data-lucide="rotate-ccw" class="w-4 h-4 mr-1"></i>
-                    Reset Grid
+                    Reset
                 </button>
             </div>
-        </div>
-    </div>
 
     <script src="js/engine.js"></script>
 
